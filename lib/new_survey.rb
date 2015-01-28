@@ -1,2 +1,2 @@
-class NewSurvey
+class NewSurvey < ActiveRecord::Base
 end

@@ -1,0 +1,17 @@
+<h1>Create a new survey!</h1>
+
+<form action="survey" method="post">
+  <input type="text" name="name" placeholder = "Enter Survey Name">
+  <button type="submit" class="btn btn-success">Create Survey</button>
+</form>
+
+<ul>
+<% if @new_survey.any?() %>
+  <% @new_survey.each() do |survey| %>
+   <li><%= survey.name() %></li>
+   <% end %>
+  <% else %>
+  <%= "There are no surveys!" %>
+  <% end %>
+
+</ul>
