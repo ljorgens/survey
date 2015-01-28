@@ -1,0 +1,2 @@
+class NewSurvey
+end
