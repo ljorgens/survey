@@ -8,7 +8,7 @@
 <ul>
 <% if @new_survey.any?() %>
   <% @new_survey.each() do |survey| %>
-   <li><%= survey.name() %></li>
+   <li><a href="/new_survey/<%= survey.id %>" > <%= survey.name() %></a></li>
    <% end %>
   <% else %>
   <%= "There are no surveys!" %>

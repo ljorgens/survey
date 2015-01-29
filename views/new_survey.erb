@@ -1,0 +1,17 @@
+<h1>Enter questions for <%= @new_survey.name() %></h1>
+
+<form action="/new_survey/<%= @new_survey.id %>" method="post">
+  <input type="text" name="description" size="50" placeholder="Enter a question!">
+  <button type="submit" class="btn btn-danger">Add Question</button>
+</form>
+
+
+<ul>
+  <% if @new_survey.questions().any?() %>
+  <%  @new_survey.questions().each() do |sentence| %>
+  <li><%= sentence.description() %></li>
+  <% end %>
+  <% else %>
+  <%= "No Questions! You Pass!" %>
+  <% end %>
+</ul>
